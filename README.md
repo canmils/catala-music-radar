@@ -21,3 +21,30 @@ A Python tool to track Catalan music artists, playlists, and recent releases usi
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+
+## Environment variables
+
+Create a local `.env` file or set these variables in PowerShell:
+
+```powershell
+$env:SPOTIFY_CLIENT_ID="your-client-id"
+$env:SPOTIFY_CLIENT_SECRET="your-client-secret"
+```
+
+## Run
+
+```powershell
+python .\src\main.py
+```
+
+## Output
+
+Generated CSV reports are stored in:
+
+```text
+output/
+```
+
+## Status
+
+Prototype / portfolio project focused on music discovery workflows and public data aggregation.
