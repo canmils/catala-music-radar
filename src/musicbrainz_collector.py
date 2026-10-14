@@ -184,6 +184,9 @@ def main():
                 "date_status": date_status
             })
 
+    if not rows:
+        print("No artists or release records found. Check data/artists.txt and the source responses.")
+        return
     df = pd.DataFrame(rows)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
