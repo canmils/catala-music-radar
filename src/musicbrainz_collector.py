@@ -13,7 +13,9 @@ REQUEST_SLEEP = 1.5
 MAX_RETRIES = 3
 
 HEADERS = {
-    "User-Agent": "catala-music-radar/0.4 (local personal project; contact: local)"
+    # MusicBrainz requires an app name, version and a real contact:
+    # https://musicbrainz.org/doc/MusicBrainz_API/Rate_Limiting
+    "User-Agent": "catala-music-radar/0.5 ( https://github.com/canmils/catala-music-radar )"
 }
 
 

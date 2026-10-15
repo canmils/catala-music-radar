@@ -14,4 +14,16 @@ class CollectorTest(unittest.TestCase):
                 self.assertIn("Fictional EP",files[0].read_text(encoding="utf-8-sig"))
                 artists.write_text("")
                 collector.main()
-if __name__=="__main__":unittest.main()
+
+
+class UserAgentTest(unittest.TestCase):
+    def test_user_agent_has_name_version_and_contact(self):
+        # MusicBrainz policy: "Application name/<version> ( contact-url or email )"
+        import re
+        ua = collector.HEADERS["User-Agent"]
+        self.assertRegex(ua, r"^[\w-]+/\d+(\.\d+)* \( (https?://\S+|\S+@\S+) \)$")
+        self.assertNotIn("contact: local", ua)
+
+
+if __name__ == "__main__":
+    unittest.main()

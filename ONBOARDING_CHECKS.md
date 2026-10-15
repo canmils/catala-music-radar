@@ -1,9 +1,12 @@
-# Onboarding verification
+# Verification record
 
-Date: 2026-10-14. Local Linux environment; Python 3.12 and Node 22/24 as applicable.
+## 15 October 2026
 
-Fresh Python environment installed. One mocked collector test passed for CSV creation and empty input. Python syntax passed. Live MusicBrainz/Spotify access and language identity were not verified.
+- Offline tests pass on Python 3.12: CSV creation from a mocked MusicBrainz response, empty artist list, and a User-Agent that meets the MusicBrainz policy.
+- User-Agent changed to `catala-music-radar/0.5 ( https://github.com/canmils/catala-music-radar )`, the format MusicBrainz asks for. The previous value had no real contact.
+- The 1.5-second pause between requests stays under the MusicBrainz limit of about one request per second.
 
-## Reading the result
+## Not checked
 
-A passing build or mocked test does not certify live data availability, AI quality, security of public deployment, or market value. CI workflows are provided where appropriate; remote GitHub Actions results must be checked after the commit. Windows/macOS commands are documented, but native runs on those systems were not performed here. Never mark an unavailable check as passed.
+- A live MusicBrainz run (not reachable from the editing environment).
+- Spotify access.
